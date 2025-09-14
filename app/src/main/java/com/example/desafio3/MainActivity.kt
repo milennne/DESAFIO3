@@ -23,23 +23,23 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DESAFIO3Theme {
-                ComposeQuadrantApp()
+                Cuadros()
             }
         }
     }
 }
 
 @Composable
-fun ComposeQuadrantApp() {
+fun Cuadros() {
     Column(Modifier.fillMaxSize()) {
         Row(Modifier.weight(1f)) {
-            QuadrantCard(
+            Cuadro(
                 title = "Text composable",
                 description = "Displays text and follows the recommended Material Design guidelines.",
                 backgroundColor = Color(0xFFEADDFF),
                 modifier = Modifier.weight(1f)
             )
-            QuadrantCard(
+            Cuadro(
                 title = "Image composable",
                 description = "Creates a composable that lays out and draws a given Painter class object.",
                 backgroundColor = Color(0xFFD0BCFF),
@@ -47,13 +47,13 @@ fun ComposeQuadrantApp() {
             )
         }
         Row(Modifier.weight(1f)) {
-            QuadrantCard(
+            Cuadro(
                 title = "Row composable",
                 description = "A layout composable that places its children in a horizontal sequence.",
                 backgroundColor = Color(0xFFB69DF8),
                 modifier = Modifier.weight(1f)
             )
-            QuadrantCard(
+            Cuadro(
                 title = "Column composable",
                 description = "A layout composable that places its children in a vertical sequence.",
                 backgroundColor = Color(0xFFF6EDFF),
@@ -64,7 +64,7 @@ fun ComposeQuadrantApp() {
 }
 
 @Composable
-fun QuadrantCard(
+fun Cuadro(
     title: String,
     description: String,
     backgroundColor: Color,
@@ -94,6 +94,6 @@ fun QuadrantCard(
 @Composable
 fun QuadrantPreview() {
     DESAFIO3Theme {
-        ComposeQuadrantApp()
+        Cuadros()
     }
 }
